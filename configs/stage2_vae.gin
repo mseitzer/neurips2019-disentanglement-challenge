@@ -1,0 +1,38 @@
+main.dataset_size = 0
+main.sequential_dataset = True
+main.vae_batch_size = 256
+main.use_pca = False
+main.cache_features_on_disk = True
+main.transform_class = @IdentityTransform
+
+IdentityTransform.l2_normalize = False
+
+get_feature_extractor.model_name = 'AggVGG19'
+get_feature_extractor.interpolation_size = (64, 64)
+
+AggregatedFeatureExtractor.features = [1024, 2048, 512]
+AggregatedFeatureExtractor.kernel_sizes = [1, 2, 1]
+AggregatedFeatureExtractor.strides = [1, 1, 1]
+AggregatedFeatureExtractor.paddings = [0, 0, 0]
+AggregatedFeatureExtractor.dropout = 0.1
+AggregatedFeatureExtractor.l2_normalize = True
+
+Encoder.features_per_layer = [4096]
+Encoder.init = 'orthogonal'
+Encoder.batch_norm = True
+Decoder.features_per_layer = [4096, 4096, 4096, 4096]
+Encoder.init = 'orthogonal'
+Decoder.batch_norm = True
+
+train_vae.lr = 1e-3
+train_vae.latent_dims = 18
+train_vae.epochs = 120
+train_vae.optimizer_name = 'radam'
+train_vae.adam_beta1 = 0.9
+train_vae.beta_schedule_class = @BetaSchedule
+
+BetaSchedule.schedule_type = 'cosine'
+BetaSchedule.beta0 = 0.005
+BetaSchedule.beta1 = 0.4
+BetaSchedule.beta_start = 10
+BetaSchedule.beta_end = 79

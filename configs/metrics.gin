@@ -1,0 +1,2 @@
+# Available metrics are ['dci', 'factor_vae_metric', 'sap_score', 'mig', 'irs']
+get_eval_metrics.metrics = ['dci', 'factor_vae_metric', 'sap_score', 'mig', 'irs']

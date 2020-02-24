@@ -1,0 +1,22 @@
+main.dataset_name = ['mpi3d_toy', 'mpi3d_realistic']
+main.dataset_size = 0
+main.batch_size = 512
+main.test_ratio = 0.2
+
+train.epochs = 5
+train.optimizer_name = 'radam'
+train.lr = 1e-3
+train.weight_decay = 0.01
+train.unfreeze_extractor_epoch = 0
+train.extractor_lr = 1e-3
+train.log_interval = 50
+
+get_feature_extractor.model_name = 'VGG19'
+get_feature_extractor.interpolation_size = (64, 64)
+
+AggregatedFeatureExtractor.features = [1024, 2048, 512]
+AggregatedFeatureExtractor.kernel_sizes = [1, 2, 1]
+AggregatedFeatureExtractor.strides = [1, 1, 1]
+AggregatedFeatureExtractor.paddings = [0, 0, 0]
+AggregatedFeatureExtractor.dropout = 0.1
+AggregatedFeatureExtractor.l2_normalize = True

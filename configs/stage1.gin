@@ -1,0 +1,28 @@
+main.dataset_size = 0
+main.sequential_dataset = True
+main.vae_batch_size = 256
+main.use_pca = False
+main.cache_features_on_disk = True
+main.transform_class = @RMACTransform
+
+get_feature_extractor.model_name = 'VGG19'
+
+Encoder.features_per_layer = [256, 128, 64]
+Encoder.batch_norm = True
+Decoder.features_per_layer = [64, 128, 256]
+Decoder.batch_norm = True
+
+GaussianLikelihood.scale_mean_zero_one = False
+
+GaussianLikelihood.scale_loss_by_batch = False
+RegularizationLoss.scale_by_batch = False
+
+train_vae.lr = 1e-3
+train_vae.latent_dims = 18
+train_vae.epochs = 20
+
+BetaSchedule.schedule_type = 'cosine'
+BetaSchedule.beta0 = 0.0001
+BetaSchedule.beta1 = 0.12
+BetaSchedule.beta_start = 1
+BetaSchedule.beta_end = 19
