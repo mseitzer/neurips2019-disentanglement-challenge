@@ -3,7 +3,7 @@
 This is the code release for our submissions to the [NeurIPS 2019 Disentanglement Challenge](https://www.aicrowd.com/challenges/neurips-2019-disentanglement-challenge). 
 We achieved the second place in both stage 1 and stage 2 of the challenge.
 
-You can find the accompanying reports on Arxiv soon. 
+The accompanying reports to [stage 1](https://arxiv.org/abs/2002.10003) and [stage 2](https://arxiv.org/abs/2002.12356) are on Arxiv.
 If you make use of our ideas or this codebase in your research, please consider [citing the reports](#citing).
 
 This codebase builds heavily on AIcrowd's [Disentanglement Challenge Starter Kit](https://github.com/AIcrowd/neurips2019_disentanglement_challenge_starter_kit). 
@@ -75,4 +75,28 @@ Now you can run the main training step for stage 2:
 
 If you make use of our ideas or this codebase in your research, please consider citing our reports for stage 1 or 2.
 
-Citation information coming soon.
+Stage 1:
+
+```
+@article{Seitzer2020DisChallenge1,
+    title={{NeurIPS 2019 Disentanglement Challenge: Improved Disentanglement through Aggregated Convolutional Feature Maps}},
+    author={Maximilian Seitzer},
+    year={2020},
+    journal={ArXiv},
+    volume={abs/2002.10003},
+    url={https://arxiv.org/abs/2002.10003}
+}
+```
+
+Stage 2:
+
+```
+@article{Seitzer2020DisChallenge2,
+    title={{NeurIPS 2019 Disentanglement Challenge: Improved Disentanglement through Learned Aggregation of Convolutional Feature Maps}},
+    author={Maximilian Seitzer and Andreas Foltyn and Felix P. Kemeth},
+    year={2020},
+    journal={ArXiv},
+    volume={abs/2002.12356},
+    url={https://arxiv.org/abs/2002.12356}
+}
+```
